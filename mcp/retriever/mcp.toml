@@ -1,0 +1,6 @@
+[server]
+entrypoint = "server.py:mcp"
+
+[server.dependencies]
+fastmcp = "*"
+rank-bm25 = "*"

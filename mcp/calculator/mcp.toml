@@ -1,0 +1,7 @@
+[server]
+entrypoint = "server.py:mcp"
+
+[server.dependencies]
+fastmcp = "*"
+numpy = "*"
+scipy = "*"
