@@ -1,0 +1,21 @@
+name: "treasury-qa-agent"
+version: "1.0.0"
+competition: "office-qa"
+
+agent:
+  type: "harness"
+  harness_name: "codex"
+  model: "openrouter/openrouter/owl-alpha"
+
+  prompt_template_path: "prompts/officeqa_prompt.j2"
+  skills_dir: "skills"
+  mcp_dir: "mcp"
+
+  env:
+    OPENROUTER_API_KEY: "${oc.env:OPENROUTER_API_KEY,''}"
+    LLM_TEMPERATURE: "0.0"
+    MAX_ITERATIONS: "80"
+
+environment:
+  memory: "8G"
+  timeout_per_task: 600
